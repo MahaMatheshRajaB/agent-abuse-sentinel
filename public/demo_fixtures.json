@@ -1,0 +1,1300 @@
+{
+  "results": [
+    {
+      "session_id": "20cce5aa-9d70-4526-8fb9-b8a169d656a6",
+      "true_label": "normal",
+      "true_sub_pattern": "regular",
+      "tier": "pass",
+      "rule": {
+        "score": 1,
+        "max_score": 9,
+        "threshold": 5,
+        "flagged": false
+      },
+      "ml": {
+        "model": "LightGBM",
+        "probability": 0.0002,
+        "threshold": 0.1,
+        "flagged": false,
+        "unavailable_reason": null
+      },
+      "signals_fired": [
+        {
+          "feature": "discount_code_attempts",
+          "value": 2,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Excessive discount code attempts (2 > 2)"
+        }
+      ],
+      "signals_all": [
+        {
+          "feature": "param_reuse_rate",
+          "value": 0.0367,
+          "threshold": 0.1885,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "num_requests",
+          "value": 13,
+          "threshold": 50.75,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "value": 7.7664,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 6.7019,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 2.5013,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "failed_request_rate",
+          "value": 0.0209,
+          "threshold": 0.1457,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "unique_params_touched",
+          "value": 10,
+          "threshold": 12.25,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 2,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Excessive discount code attempts (2 > 2)"
+        },
+        {
+          "feature": "mouse_or_client_signal_present",
+          "value": true,
+          "threshold": null,
+          "direction": "absent_penalty",
+          "fired": false,
+          "reason": null
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "param_reuse_rate",
+          "importance": 279.0,
+          "session_value": 0.0367
+        },
+        {
+          "feature": "discount_code_attempts",
+          "importance": 276.0,
+          "session_value": 2
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "importance": 251.0,
+          "session_value": 7.7664
+        },
+        {
+          "feature": "num_requests",
+          "importance": 210.0,
+          "session_value": 13
+        },
+        {
+          "feature": "session_duration_sec",
+          "importance": 183.0,
+          "session_value": 93.196
+        }
+      ]
+    },
+    {
+      "session_id": "8ce0ae37-cc91-48d2-9e67-90b4608ee3a8",
+      "true_label": "abusive",
+      "true_sub_pattern": "promo_abuse",
+      "tier": "high_confidence",
+      "rule": {
+        "score": 6,
+        "max_score": 9,
+        "threshold": 5,
+        "flagged": true
+      },
+      "ml": {
+        "model": "LightGBM",
+        "probability": 0.9978,
+        "threshold": 0.1,
+        "flagged": true,
+        "unavailable_reason": null
+      },
+      "signals_fired": [
+        {
+          "feature": "mean_inter_request_time",
+          "value": 2.5975,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (2.60s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 1.2967,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Machine-regular timing, low variance (1.30s < 3.49s)"
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 1.0815,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Fastest gap between requests is too short (1.08s < 1.12s)"
+        },
+        {
+          "feature": "unique_params_touched",
+          "value": 25,
+          "threshold": 12.25,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Touches an unusually wide range of params (25 > 12) -- scanning behaviour"
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 16,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Excessive discount code attempts (16 > 2)"
+        },
+        {
+          "feature": "mouse_or_client_signal_present",
+          "value": false,
+          "threshold": null,
+          "direction": "absent_penalty",
+          "fired": true,
+          "reason": "No mouse/client-side interaction signal present"
+        }
+      ],
+      "signals_all": [
+        {
+          "feature": "param_reuse_rate",
+          "value": 0.1459,
+          "threshold": 0.1885,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "num_requests",
+          "value": 32,
+          "threshold": 50.75,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "value": 2.5975,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (2.60s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 1.2967,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Machine-regular timing, low variance (1.30s < 3.49s)"
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 1.0815,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Fastest gap between requests is too short (1.08s < 1.12s)"
+        },
+        {
+          "feature": "failed_request_rate",
+          "value": 0.1009,
+          "threshold": 0.1457,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "unique_params_touched",
+          "value": 25,
+          "threshold": 12.25,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Touches an unusually wide range of params (25 > 12) -- scanning behaviour"
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 16,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Excessive discount code attempts (16 > 2)"
+        },
+        {
+          "feature": "mouse_or_client_signal_present",
+          "value": false,
+          "threshold": null,
+          "direction": "absent_penalty",
+          "fired": true,
+          "reason": "No mouse/client-side interaction signal present"
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "param_reuse_rate",
+          "importance": 279.0,
+          "session_value": 0.1459
+        },
+        {
+          "feature": "discount_code_attempts",
+          "importance": 276.0,
+          "session_value": 16
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "importance": 251.0,
+          "session_value": 2.5975
+        },
+        {
+          "feature": "num_requests",
+          "importance": 210.0,
+          "session_value": 32
+        },
+        {
+          "feature": "session_duration_sec",
+          "importance": 183.0,
+          "session_value": 80.522
+        }
+      ]
+    },
+    {
+      "session_id": "4754928d-8a57-4e8a-b86c-eb4f006b1011",
+      "true_label": "abusive",
+      "true_sub_pattern": "scraper",
+      "tier": "high_confidence",
+      "rule": {
+        "score": 7,
+        "max_score": 9,
+        "threshold": 5,
+        "flagged": true
+      },
+      "ml": {
+        "model": "LightGBM",
+        "probability": 0.9994,
+        "threshold": 0.1,
+        "flagged": true,
+        "unavailable_reason": null
+      },
+      "signals_fired": [
+        {
+          "feature": "num_requests",
+          "value": 125,
+          "threshold": 50.75,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Unusually high request volume (125 > 51)"
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "value": 2.6145,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (2.61s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 1.2775,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Machine-regular timing, low variance (1.28s < 3.49s)"
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 0.8082,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Fastest gap between requests is too short (0.81s < 1.12s)"
+        },
+        {
+          "feature": "unique_params_touched",
+          "value": 73,
+          "threshold": 12.25,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Touches an unusually wide range of params (73 > 12) -- scanning behaviour"
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 2,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Excessive discount code attempts (2 > 2)"
+        },
+        {
+          "feature": "mouse_or_client_signal_present",
+          "value": false,
+          "threshold": null,
+          "direction": "absent_penalty",
+          "fired": true,
+          "reason": "No mouse/client-side interaction signal present"
+        }
+      ],
+      "signals_all": [
+        {
+          "feature": "param_reuse_rate",
+          "value": 0.1366,
+          "threshold": 0.1885,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "num_requests",
+          "value": 125,
+          "threshold": 50.75,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Unusually high request volume (125 > 51)"
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "value": 2.6145,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (2.61s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 1.2775,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Machine-regular timing, low variance (1.28s < 3.49s)"
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 0.8082,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Fastest gap between requests is too short (0.81s < 1.12s)"
+        },
+        {
+          "feature": "failed_request_rate",
+          "value": 0.0996,
+          "threshold": 0.1457,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "unique_params_touched",
+          "value": 73,
+          "threshold": 12.25,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Touches an unusually wide range of params (73 > 12) -- scanning behaviour"
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 2,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Excessive discount code attempts (2 > 2)"
+        },
+        {
+          "feature": "mouse_or_client_signal_present",
+          "value": false,
+          "threshold": null,
+          "direction": "absent_penalty",
+          "fired": true,
+          "reason": "No mouse/client-side interaction signal present"
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "param_reuse_rate",
+          "importance": 279.0,
+          "session_value": 0.1366
+        },
+        {
+          "feature": "discount_code_attempts",
+          "importance": 276.0,
+          "session_value": 2
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "importance": 251.0,
+          "session_value": 2.6145
+        },
+        {
+          "feature": "num_requests",
+          "importance": 210.0,
+          "session_value": 125
+        },
+        {
+          "feature": "session_duration_sec",
+          "importance": 183.0,
+          "session_value": 324.196
+        }
+      ]
+    },
+    {
+      "session_id": "29d05321-58bc-4dab-9784-0c4a089bc1e2",
+      "true_label": "normal",
+      "true_sub_pattern": "power_user",
+      "tier": "pass",
+      "rule": {
+        "score": 4,
+        "max_score": 9,
+        "threshold": 5,
+        "flagged": false
+      },
+      "ml": {
+        "model": "LightGBM",
+        "probability": 0.001,
+        "threshold": 0.1,
+        "flagged": false,
+        "unavailable_reason": null
+      },
+      "signals_fired": [
+        {
+          "feature": "mean_inter_request_time",
+          "value": 3.1172,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (3.12s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 1.7066,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Machine-regular timing, low variance (1.71s < 3.49s)"
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 0.9681,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Fastest gap between requests is too short (0.97s < 1.12s)"
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 3,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Excessive discount code attempts (3 > 2)"
+        }
+      ],
+      "signals_all": [
+        {
+          "feature": "param_reuse_rate",
+          "value": 0.0328,
+          "threshold": 0.1885,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "num_requests",
+          "value": 13,
+          "threshold": 50.75,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "value": 3.1172,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (3.12s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 1.7066,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Machine-regular timing, low variance (1.71s < 3.49s)"
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 0.9681,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Fastest gap between requests is too short (0.97s < 1.12s)"
+        },
+        {
+          "feature": "failed_request_rate",
+          "value": 0.1425,
+          "threshold": 0.1457,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "unique_params_touched",
+          "value": 8,
+          "threshold": 12.25,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 3,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Excessive discount code attempts (3 > 2)"
+        },
+        {
+          "feature": "mouse_or_client_signal_present",
+          "value": true,
+          "threshold": null,
+          "direction": "absent_penalty",
+          "fired": false,
+          "reason": null
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "param_reuse_rate",
+          "importance": 279.0,
+          "session_value": 0.0328
+        },
+        {
+          "feature": "discount_code_attempts",
+          "importance": 276.0,
+          "session_value": 3
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "importance": 251.0,
+          "session_value": 3.1172
+        },
+        {
+          "feature": "num_requests",
+          "importance": 210.0,
+          "session_value": 13
+        },
+        {
+          "feature": "session_duration_sec",
+          "importance": 183.0,
+          "session_value": 37.407
+        }
+      ]
+    },
+    {
+      "session_id": "20889d10-a734-4a08-960e-b7639af8eb59",
+      "true_label": "abusive",
+      "true_sub_pattern": "card_testing",
+      "tier": "high_confidence",
+      "rule": {
+        "score": 8,
+        "max_score": 9,
+        "threshold": 5,
+        "flagged": true
+      },
+      "ml": {
+        "model": "LightGBM",
+        "probability": 0.9993,
+        "threshold": 0.1,
+        "flagged": true,
+        "unavailable_reason": null
+      },
+      "signals_fired": [
+        {
+          "feature": "param_reuse_rate",
+          "value": 0.7098,
+          "threshold": 0.1885,
+          "direction": "gt",
+          "fired": true,
+          "reason": "High parameter reuse (0.71 > 0.19) -- same values sent repeatedly"
+        },
+        {
+          "feature": "num_requests",
+          "value": 116,
+          "threshold": 50.75,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Unusually high request volume (116 > 51)"
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "value": 1.9253,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (1.93s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 1.0504,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Machine-regular timing, low variance (1.05s < 3.49s)"
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 0.5193,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Fastest gap between requests is too short (0.52s < 1.12s)"
+        },
+        {
+          "feature": "failed_request_rate",
+          "value": 0.6577,
+          "threshold": 0.1457,
+          "direction": "gt",
+          "fired": true,
+          "reason": "High failure rate (66% > 15%) -- consistent with probing/testing"
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 2,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Excessive discount code attempts (2 > 2)"
+        },
+        {
+          "feature": "mouse_or_client_signal_present",
+          "value": false,
+          "threshold": null,
+          "direction": "absent_penalty",
+          "fired": true,
+          "reason": "No mouse/client-side interaction signal present"
+        }
+      ],
+      "signals_all": [
+        {
+          "feature": "param_reuse_rate",
+          "value": 0.7098,
+          "threshold": 0.1885,
+          "direction": "gt",
+          "fired": true,
+          "reason": "High parameter reuse (0.71 > 0.19) -- same values sent repeatedly"
+        },
+        {
+          "feature": "num_requests",
+          "value": 116,
+          "threshold": 50.75,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Unusually high request volume (116 > 51)"
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "value": 1.9253,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (1.93s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 1.0504,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Machine-regular timing, low variance (1.05s < 3.49s)"
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 0.5193,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Fastest gap between requests is too short (0.52s < 1.12s)"
+        },
+        {
+          "feature": "failed_request_rate",
+          "value": 0.6577,
+          "threshold": 0.1457,
+          "direction": "gt",
+          "fired": true,
+          "reason": "High failure rate (66% > 15%) -- consistent with probing/testing"
+        },
+        {
+          "feature": "unique_params_touched",
+          "value": 7,
+          "threshold": 12.25,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 2,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Excessive discount code attempts (2 > 2)"
+        },
+        {
+          "feature": "mouse_or_client_signal_present",
+          "value": false,
+          "threshold": null,
+          "direction": "absent_penalty",
+          "fired": true,
+          "reason": "No mouse/client-side interaction signal present"
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "param_reuse_rate",
+          "importance": 279.0,
+          "session_value": 0.7098
+        },
+        {
+          "feature": "discount_code_attempts",
+          "importance": 276.0,
+          "session_value": 2
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "importance": 251.0,
+          "session_value": 1.9253
+        },
+        {
+          "feature": "num_requests",
+          "importance": 210.0,
+          "session_value": 116
+        },
+        {
+          "feature": "session_duration_sec",
+          "importance": 183.0,
+          "session_value": 221.412
+        }
+      ]
+    },
+    {
+      "session_id": "c6b35264-64fd-43d4-9cfb-810619d14225",
+      "true_label": "normal",
+      "true_sub_pattern": "ai_shopping_agent",
+      "tier": "pass",
+      "rule": {
+        "score": 4,
+        "max_score": 9,
+        "threshold": 5,
+        "flagged": false
+      },
+      "ml": {
+        "model": "LightGBM",
+        "probability": 0.0002,
+        "threshold": 0.1,
+        "flagged": false,
+        "unavailable_reason": null
+      },
+      "signals_fired": [
+        {
+          "feature": "mean_inter_request_time",
+          "value": 3.4082,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (3.41s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 1.5511,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Machine-regular timing, low variance (1.55s < 3.49s)"
+        },
+        {
+          "feature": "failed_request_rate",
+          "value": 0.1877,
+          "threshold": 0.1457,
+          "direction": "gt",
+          "fired": true,
+          "reason": "High failure rate (19% > 15%) -- consistent with probing/testing"
+        },
+        {
+          "feature": "mouse_or_client_signal_present",
+          "value": false,
+          "threshold": null,
+          "direction": "absent_penalty",
+          "fired": true,
+          "reason": "No mouse/client-side interaction signal present"
+        }
+      ],
+      "signals_all": [
+        {
+          "feature": "param_reuse_rate",
+          "value": 0.1123,
+          "threshold": 0.1885,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "num_requests",
+          "value": 20,
+          "threshold": 50.75,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "value": 3.4082,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (3.41s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 1.5511,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Machine-regular timing, low variance (1.55s < 3.49s)"
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 1.2118,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "failed_request_rate",
+          "value": 0.1877,
+          "threshold": 0.1457,
+          "direction": "gt",
+          "fired": true,
+          "reason": "High failure rate (19% > 15%) -- consistent with probing/testing"
+        },
+        {
+          "feature": "unique_params_touched",
+          "value": 8,
+          "threshold": 12.25,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 1,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "mouse_or_client_signal_present",
+          "value": false,
+          "threshold": null,
+          "direction": "absent_penalty",
+          "fired": true,
+          "reason": "No mouse/client-side interaction signal present"
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "param_reuse_rate",
+          "importance": 279.0,
+          "session_value": 0.1123
+        },
+        {
+          "feature": "discount_code_attempts",
+          "importance": 276.0,
+          "session_value": 1
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "importance": 251.0,
+          "session_value": 3.4082
+        },
+        {
+          "feature": "num_requests",
+          "importance": 210.0,
+          "session_value": 20
+        },
+        {
+          "feature": "session_duration_sec",
+          "importance": 183.0,
+          "session_value": 64.757
+        }
+      ]
+    },
+    {
+      "session_id": "a8ba55a3-4b54-4074-aad4-2446b1c7b346",
+      "true_label": "abusive",
+      "true_sub_pattern": "promo_abuse",
+      "tier": "high_confidence",
+      "rule": {
+        "score": 7,
+        "max_score": 9,
+        "threshold": 5,
+        "flagged": true
+      },
+      "ml": {
+        "model": "LightGBM",
+        "probability": 0.9993,
+        "threshold": 0.1,
+        "flagged": true,
+        "unavailable_reason": null
+      },
+      "signals_fired": [
+        {
+          "feature": "param_reuse_rate",
+          "value": 0.3356,
+          "threshold": 0.1885,
+          "direction": "gt",
+          "fired": true,
+          "reason": "High parameter reuse (0.34 > 0.19) -- same values sent repeatedly"
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "value": 2.6823,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (2.68s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 1.2648,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Machine-regular timing, low variance (1.26s < 3.49s)"
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 1.0123,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Fastest gap between requests is too short (1.01s < 1.12s)"
+        },
+        {
+          "feature": "failed_request_rate",
+          "value": 0.2434,
+          "threshold": 0.1457,
+          "direction": "gt",
+          "fired": true,
+          "reason": "High failure rate (24% > 15%) -- consistent with probing/testing"
+        },
+        {
+          "feature": "unique_params_touched",
+          "value": 16,
+          "threshold": 12.25,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Touches an unusually wide range of params (16 > 12) -- scanning behaviour"
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 7,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Excessive discount code attempts (7 > 2)"
+        }
+      ],
+      "signals_all": [
+        {
+          "feature": "param_reuse_rate",
+          "value": 0.3356,
+          "threshold": 0.1885,
+          "direction": "gt",
+          "fired": true,
+          "reason": "High parameter reuse (0.34 > 0.19) -- same values sent repeatedly"
+        },
+        {
+          "feature": "num_requests",
+          "value": 43,
+          "threshold": 50.75,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "value": 2.6823,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (2.68s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 1.2648,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Machine-regular timing, low variance (1.26s < 3.49s)"
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 1.0123,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Fastest gap between requests is too short (1.01s < 1.12s)"
+        },
+        {
+          "feature": "failed_request_rate",
+          "value": 0.2434,
+          "threshold": 0.1457,
+          "direction": "gt",
+          "fired": true,
+          "reason": "High failure rate (24% > 15%) -- consistent with probing/testing"
+        },
+        {
+          "feature": "unique_params_touched",
+          "value": 16,
+          "threshold": 12.25,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Touches an unusually wide range of params (16 > 12) -- scanning behaviour"
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 7,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": true,
+          "reason": "Excessive discount code attempts (7 > 2)"
+        },
+        {
+          "feature": "mouse_or_client_signal_present",
+          "value": true,
+          "threshold": null,
+          "direction": "absent_penalty",
+          "fired": false,
+          "reason": null
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "param_reuse_rate",
+          "importance": 279.0,
+          "session_value": 0.3356
+        },
+        {
+          "feature": "discount_code_attempts",
+          "importance": 276.0,
+          "session_value": 7
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "importance": 251.0,
+          "session_value": 2.6823
+        },
+        {
+          "feature": "num_requests",
+          "importance": 210.0,
+          "session_value": 43
+        },
+        {
+          "feature": "session_duration_sec",
+          "importance": 183.0,
+          "session_value": 112.657
+        }
+      ]
+    },
+    {
+      "session_id": "52da12ce-c4a1-4057-9efe-cb72ceda821c",
+      "true_label": "normal",
+      "true_sub_pattern": "power_user",
+      "tier": "pass",
+      "rule": {
+        "score": 2,
+        "max_score": 9,
+        "threshold": 5,
+        "flagged": false
+      },
+      "ml": {
+        "model": "LightGBM",
+        "probability": 0.0002,
+        "threshold": 0.1,
+        "flagged": false,
+        "unavailable_reason": null
+      },
+      "signals_fired": [
+        {
+          "feature": "mean_inter_request_time",
+          "value": 4.6233,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (4.62s < 5.15s)"
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 0.5749,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Fastest gap between requests is too short (0.57s < 1.12s)"
+        }
+      ],
+      "signals_all": [
+        {
+          "feature": "param_reuse_rate",
+          "value": 0.0788,
+          "threshold": 0.1885,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "num_requests",
+          "value": 18,
+          "threshold": 50.75,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "value": 4.6233,
+          "threshold": 5.152,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Requests fired too fast on average (4.62s < 5.15s)"
+        },
+        {
+          "feature": "std_inter_request_time",
+          "value": 6.2451,
+          "threshold": 3.4851,
+          "direction": "lt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "min_inter_request_time",
+          "value": 0.5749,
+          "threshold": 1.1211,
+          "direction": "lt",
+          "fired": true,
+          "reason": "Fastest gap between requests is too short (0.57s < 1.12s)"
+        },
+        {
+          "feature": "failed_request_rate",
+          "value": 0.0769,
+          "threshold": 0.1457,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "unique_params_touched",
+          "value": 3,
+          "threshold": 12.25,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "discount_code_attempts",
+          "value": 1,
+          "threshold": 1.5,
+          "direction": "gt",
+          "fired": false,
+          "reason": null
+        },
+        {
+          "feature": "mouse_or_client_signal_present",
+          "value": true,
+          "threshold": null,
+          "direction": "absent_penalty",
+          "fired": false,
+          "reason": null
+        }
+      ],
+      "top_model_features": [
+        {
+          "feature": "param_reuse_rate",
+          "importance": 279.0,
+          "session_value": 0.0788
+        },
+        {
+          "feature": "discount_code_attempts",
+          "importance": 276.0,
+          "session_value": 1
+        },
+        {
+          "feature": "mean_inter_request_time",
+          "importance": 251.0,
+          "session_value": 4.6233
+        },
+        {
+          "feature": "num_requests",
+          "importance": 210.0,
+          "session_value": 18
+        },
+        {
+          "feature": "session_duration_sec",
+          "importance": 183.0,
+          "session_value": 78.596
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_sessions": 8,
+    "tier_counts": {
+      "pass": 4,
+      "review_queue": 0,
+      "high_confidence": 4
+    }
+  }
+}

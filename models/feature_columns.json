@@ -1,0 +1,19 @@
+[
+  "num_requests",
+  "session_duration_sec",
+  "mean_inter_request_time",
+  "std_inter_request_time",
+  "min_inter_request_time",
+  "unique_params_touched",
+  "param_reuse_rate",
+  "failed_request_rate",
+  "endpoint_diversity",
+  "user_agent_entropy",
+  "mouse_or_client_signal_present",
+  "discount_code_attempts",
+  "geo_ip_consistency",
+  "time_of_day_bucket_afternoon",
+  "time_of_day_bucket_evening",
+  "time_of_day_bucket_morning",
+  "time_of_day_bucket_night"
+]

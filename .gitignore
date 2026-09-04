@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Models & Data (optional artifacts if large)
+*.pkl
+
+# IDEs & System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

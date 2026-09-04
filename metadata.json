@@ -1,0 +1,6 @@
+{
+  "name": "Sentinel AI - Security Console",
+  "description": "AI security monitoring console with real-time telemetry, anomaly detection, and adversarial recall resolution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

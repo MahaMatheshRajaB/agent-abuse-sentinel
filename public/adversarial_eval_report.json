@@ -1,0 +1,67 @@
+{
+  "description": "Adversarial stress-test: bots with human-mimicry evasion",
+  "evasion_strategies": [
+    "Timing slowed above mean_irt threshold (7-20s mean gap)",
+    "High timing variance (sigma 0.9-1.6) to avoid std_irt threshold",
+    "Mouse/client signal injected (True) to avoid absent_penalty",
+    "param_reuse_rate kept below 0.2453 threshold",
+    "num_requests kept below 75.75 threshold",
+    "discount_code_attempts kept at 0-1 (at/below threshold)",
+    "failed_request_rate kept below 0.1948 threshold"
+  ],
+  "overall": {
+    "total": 60,
+    "detected": 0,
+    "missed": 60,
+    "recall": 0.0,
+    "high_confidence": 0,
+    "review_queue": 0,
+    "pass_evaded": 60
+  },
+  "per_pattern": {
+    "adv_card_testing": {
+      "total": 20,
+      "detected": 0,
+      "missed": 20,
+      "recall": 0.0,
+      "high_confidence": 0,
+      "review_queue": 0,
+      "pass_evaded": 20
+    },
+    "adv_scraper": {
+      "total": 20,
+      "detected": 0,
+      "missed": 20,
+      "recall": 0.0,
+      "high_confidence": 0,
+      "review_queue": 0,
+      "pass_evaded": 20
+    },
+    "adv_promo_abuse": {
+      "total": 20,
+      "detected": 0,
+      "missed": 20,
+      "recall": 0.0,
+      "high_confidence": 0,
+      "review_queue": 0,
+      "pass_evaded": 20
+    }
+  },
+  "comparison_vs_clean_holdout": {
+    "clean_overall_recall": "1.0000",
+    "adv_overall_recall": 0.0,
+    "clean_card_testing_recall": "1.0000",
+    "adv_card_testing_recall": "0.0000",
+    "clean_scraper_recall": "1.0000",
+    "adv_scraper_recall": "0.0000",
+    "clean_promo_abuse_recall": "0.9655",
+    "adv_promo_abuse_recall": "0.0000"
+  },
+  "recommended_mitigations": [
+    "Rolling velocity windows (requests per 60s, 300s)",
+    "Sequence burst fingerprinting",
+    "Device/network identity signals (IP subnet, TLS JA3, geolocation)",
+    "Historical account risk score (repeat review_queue sessions)",
+    "Online threshold recalibration on confirmed abuse labels"
+  ]
+}

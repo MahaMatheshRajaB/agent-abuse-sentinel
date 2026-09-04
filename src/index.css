@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f8fafb;
+  --color-surface-dim: #F1F4F7;
+  --color-surface-bright: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f4f5;
+  --color-surface-container: #eceeef;
+  --color-surface-container-high: #e6e8e9;
+  --color-surface-container-highest: #e1e3e4;
+  --color-on-surface: #1A212B;
+  --color-on-surface-variant: #4A5568;
+  --color-inverse-surface: #2e3132;
+  --color-inverse-on-surface: #eff1f2;
+  --color-outline: #D1D9E0;
+  --color-outline-variant: #bdc9ca;
+  --color-surface-tint: #006970;
+  --color-primary: #005f66;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #007a82;
+  --color-on-primary-container: #cafaff;
+  --color-inverse-primary: #7ad4dd;
+  --color-secondary: #7d5800;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #ffc24b;
+  --color-on-secondary-container: #725000;
+  --color-tertiary: #4a566c;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #626e85;
+  --color-on-tertiary-container: #ecf1ff;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #97f1fa;
+  --color-primary-fixed-dim: #7ad4dd;
+  --color-on-primary-fixed: #002022;
+  --color-on-primary-fixed-variant: #004f54;
+  --color-secondary-fixed: #ffdea9;
+  --color-secondary-fixed-dim: #f9bc46;
+  --color-on-secondary-fixed: #271900;
+  --color-on-secondary-fixed-variant: #5e4200;
+  --color-tertiary-fixed: #d7e3fd;
+  --color-tertiary-fixed-dim: #bbc7e1;
+  --color-on-tertiary-fixed: #0f1c2f;
+  --color-on-tertiary-fixed-variant: #3b475c;
+  --color-background: #f8fafb;
+  --color-on-background: #191c1d;
+  --color-surface-variant: #e1e3e4;
+  --color-accent-cyan: #00D1DF;
+  --color-status-red: #D32F2F;
+
+  --font-mono-label: "JetBrains Mono", monospace;
+  --font-mono-data: "JetBrains Mono", monospace;
+  --font-body-sm: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-headline-sm: "Inter", sans-serif;
+  --font-headline-md: "Inter", sans-serif;
+  --font-headline-md-mobile: "Inter", sans-serif;
+  --font-display-lg: "Inter", sans-serif;
+
+  --spacing-unit: 4px;
+  --spacing-gutter: 16px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 32px;
+  --spacing-container-max-width: 1440px;
+}
+
+@layer utilities {
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .material-symbols-outlined.fill {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .glass-panel {
+    background-color: var(--color-surface-container-lowest);
+    border: 1px solid var(--color-outline);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Typography styles matching spec */
+.font-mono-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+.font-mono-data {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.font-body-sm {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.font-body-md {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.font-headline-sm {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.font-headline-md {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.font-headline-md-mobile {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+.font-display-lg {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}

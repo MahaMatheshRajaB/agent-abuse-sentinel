@@ -1,0 +1,117 @@
+{
+  "holdout_path": "sessions_holdout.csv",
+  "holdout_total": 300,
+  "holdout_abusive": 75,
+  "holdout_normal": 225,
+  "rule_score_threshold": 5,
+  "ml_prob_threshold": 0.1,
+  "ml_model": "LightGBM",
+  "results_are_perfect": false,
+  "honesty_note": "Results contain imperfections -- see per-approach metrics.",
+  "rule_based": {
+    "approach": "Rule-Based Scorer",
+    "precision": 0.7446808510638298,
+    "recall": 0.9333333333333333,
+    "f1": 0.8284023668639053,
+    "fpr": 0.10666666666666667,
+    "tp": 70,
+    "fp": 24,
+    "fn": 5,
+    "tn": 201,
+    "fp_count": 24,
+    "n_normal": 225,
+    "fp_rate": 0.10666666666666667,
+    "per_pattern": {
+      "card_testing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 25,
+        "fp": 0,
+        "fn": 0
+      },
+      "scraper": {
+        "precision": 1.0,
+        "recall": 0.9523809523809523,
+        "f1": 0.975609756097561,
+        "tp": 20,
+        "fp": 0,
+        "fn": 1
+      },
+      "promo_abuse": {
+        "precision": 1.0,
+        "recall": 0.8620689655172413,
+        "f1": 0.9259259259259259,
+        "tp": 25,
+        "fp": 0,
+        "fn": 4
+      }
+    }
+  },
+  "ml": {
+    "approach": "ML (LightGBM)",
+    "precision": 0.9487179487179487,
+    "recall": 0.9866666666666667,
+    "f1": 0.9673202614379085,
+    "fpr": 0.017777777777777778,
+    "tp": 74,
+    "fp": 4,
+    "fn": 1,
+    "tn": 221,
+    "fp_count": 4,
+    "n_normal": 225,
+    "fp_rate": 0.017777777777777778,
+    "per_pattern": {
+      "card_testing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 25,
+        "fp": 0,
+        "fn": 0
+      },
+      "scraper": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 21,
+        "fp": 0,
+        "fn": 0
+      },
+      "promo_abuse": {
+        "precision": 1.0,
+        "recall": 0.9655172413793104,
+        "f1": 0.9824561403508771,
+        "tp": 28,
+        "fp": 0,
+        "fn": 1
+      }
+    }
+  },
+  "hybrid": {
+    "approach": "Hybrid (union)",
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1": 0.8571428571428571,
+    "fpr": 0.1111111111111111,
+    "tp": 75,
+    "fp": 25,
+    "fn": 0,
+    "tn": 200,
+    "fp_count": 25,
+    "n_normal": 225,
+    "fp_rate": 0.1111111111111111,
+    "per_pattern": {},
+    "tiers": {
+      "high_confidence_count": 72,
+      "review_queue_count": 28,
+      "pass_count": 200,
+      "high_conf_abusive": 69,
+      "high_conf_normal": 3,
+      "review_q_abusive": 6,
+      "review_q_normal": 22,
+      "pass_abusive": 0,
+      "pass_normal": 200
+    }
+  }
+}

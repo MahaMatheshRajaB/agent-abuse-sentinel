@@ -1,0 +1,12 @@
+{
+  "param_reuse_rate_gt": 0.18845,
+  "num_requests_gt": 50.75,
+  "mean_inter_request_time_lt": 5.151975,
+  "std_inter_request_time_lt": 3.48515,
+  "min_inter_request_time_lt": 1.12105,
+  "failed_request_rate_gt": 0.145725,
+  "unique_params_touched_gt": 12.25,
+  "discount_code_attempts_gt": 1.5,
+  "mouse_signal_absent_penalty": 1,
+  "flag_score_threshold": 5
+}
